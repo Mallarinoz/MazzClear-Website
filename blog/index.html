@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Oficial - Mazz Clear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Estilos específicos para el Blog */
+        .blog-header {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-dark), var(--bg-card));
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--primary-light);
+        }
+
+        .article-image {
+            height: 200px;
+            background: #2a2a2a;
+            /* Placeholder color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 3rem;
+        }
+
+        .article-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .read-more {
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: var(--accent);
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+        }
+
+        /* Sidebar (Opcional - Categorías) */
+        .page-layout {
+            display: flex;
+            gap: 50px;
+        }
+
+        @media(max-width: 900px) {
+            .page-layout {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Global (Reutilizado) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo"><a href="../index.html" style="text-decoration:none; color:white;">MAZZ CLEAR <span
+                        class="version">V8</span></a></div>
+            <nav class="nav">
+                <a href="../index.html">Inicio</a>
+                <a href="#" class="active">Blog</a>
+                <a href="../index.html#contact">Contacto</a>
+                <a href="#" class="btn-download">Descargar App</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <h1>Blog & Novedades</h1>
+            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                Consejos de optimización, noticias de desarrollo y guías para mantener tu PC al máximo rendimiento.
+            </p>
+        </div>
+    </section>
+
+    <!-- Artículos -->
+    <section class="container">
+        <div class="blog-grid">
+
+            <!-- Artículo 1 -->
+            <article class="article-card">
+                <div class="article-image" style="background: linear-gradient(45deg, #001F5B, #003380);">🚀</div>
+                <div class="article-content">
+                    <div class="article-meta">Optimización • 18 Dic 2025</div>
+                    <h2 class="article-title">¿Por qué tu Windows se vuelve lento con el tiempo?</h2>
+                    <p class="article-excerpt">
+                        Archivos temporales, caché de actualizaciones y registros huérfanos pueden degradar el
+                        rendimiento hasta un 40%. Descubre cómo solucionarlo.
+                    </p>
+                    <a href="post_windows_lento.html" class="read-more">Leer Artículo</a>
+                </div>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article class="article-card">
+                <div class="article-image" style="background: linear-gradient(45deg, #2E005B, #4A0091);">🛡️</div>
+                <div class="article-content">
+                    <div class="article-meta">Privacidad • 15 Dic 2025</div>
+                    <h2 class="article-title">Borrado Seguro: Lo que nadie te cuenta sobre "Eliminar"</h2>
+                    <p class="article-excerpt">
+                        Enviar archivos a la papelera no los elimina realmente. Aprende cómo el estándar DoD 5220.22-M
+                        protege tu información confidencial.
+                    </p>
+                    <a href="#" class="read-more">Leer Artículo</a>
+                </div>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article class="article-card">
+                <div class="article-image" style="background: linear-gradient(45deg, #FFD700, #B8860B); color: #000;">🎨
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">Novedades • 10 Dic 2025</div>
+                    <h2 class="article-title">Lanzamiento Mazz Clear V8: La Revolución de la UI</h2>
+                    <p class="article-excerpt">
+                        Presentamos la nueva interfaz modular con soporte multilingüe, temas neón y un motor de limpieza
+                        optimizado en Python.
+                    </p>
+                    <a href="#" class="read-more">Leer Artículo</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer Global -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cols">
+                <div class="col">
+                    <h4>Mazz Clear</h4>
+                    <p>Bogotá, Colombia</p>
+                    <p>&copy; 2025 Mazz Development Corp SAS</p>
+                </div>
+                <div class="col">
+                    <h4>Enlaces</h4>
+                    <a href="../index.html">Inicio</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Soporte</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
