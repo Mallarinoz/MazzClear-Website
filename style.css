@@ -267,6 +267,12 @@ blockquote {
 }
 
 /* Specific container for icons that need background grouping (Instagram) */
+.social-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .icon-container {
     display: flex;
     align-items: center;
