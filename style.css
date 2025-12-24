@@ -201,6 +201,24 @@ blockquote {
     margin-bottom: 10px;
 }
 
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.social-link:hover {
+    transform: translateX(5px);
+    color: #fff;
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
 .copyright {
     text-align: center;
     color: var(--text-muted);
