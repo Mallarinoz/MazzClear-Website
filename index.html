@@ -152,8 +152,8 @@
                 Ingresa tu correo para enviarte el enlace de descarga directa y consejos para optimizar tu PC.
             </p>
 
-            <!-- Formulario (Reemplazar ACTION con tu endpoint de Formspree) -->
-            <form id="downloadForm" action="https://formspree.io/f/PLACHOLDER_ID" method="POST"
+            <!-- Formulario con Endpoint Real de Formspree -->
+            <form id="downloadForm" action="https://formspree.io/f/xlgddwgl" method="POST"
                 onsubmit="handleDownload(event)">
                 <div class="form-group">
                     <label>Nombre Completo</label>
@@ -163,6 +163,9 @@
                     <label>Correo Electrónico</label>
                     <input type="email" name="email" class="form-input" placeholder="tu@email.com" required>
                 </div>
+                <!-- Campo oculto para indicar origen -->
+                <input type="hidden" name="source" value="Website Download Modal">
+
                 <button type="submit" class="btn-submit">DESCARGAR AHORA</button>
             </form>
 
