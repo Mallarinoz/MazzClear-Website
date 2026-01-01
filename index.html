@@ -142,6 +142,80 @@
             </div>
         </div>
     </footer>
+    <!-- Download Modal -->
+    <div class="modal-overlay" id="downloadModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div style="font-size: 3rem; margin-bottom: 20px;">🎉</div>
+            <h3 style="margin-bottom: 10px;">¡Tu descarga está lista!</h3>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">
+                Ingresa tu correo para enviarte el enlace de descarga directa y consejos para optimizar tu PC.
+            </p>
+
+            <!-- Formulario (Reemplazar ACTION con tu endpoint de Formspree) -->
+            <form id="downloadForm" action="https://formspree.io/f/PLACHOLDER_ID" method="POST"
+                onsubmit="handleDownload(event)">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="name" class="form-input" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                </div>
+                <button type="submit" class="btn-submit">DESCARGAR AHORA</button>
+            </form>
+
+            <p class="privacy-note">🔒 No compartiremos tu información. 100% Spam Free.</p>
+        </div>
+    </div>
+
+    <script>
+        // Configuración
+        const DOWNLOAD_URL = "https://github.com/Mallarinoz/MazzClear/releases/latest/download/MazzClear_V8_Setup.exe";
+        const modal = document.getElementById('downloadModal');
+
+        // Abrir Modal
+        function openDownloadModal(e) {
+            e.preventDefault(); // Evitar descarga directa
+            modal.classList.add('active');
+        }
+
+        // Cerrar Modal
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        // Manejar Envío
+        function handleDownload(e) {
+            // Permitir que Formspree procese (se abre en nueva pestaña usualmente si no usamos AJAX)
+            // Para UX fluida, iniciamos descarga y dejamos que el form se envíe.
+
+            // Opcional: Usar AJAX para que no recargue, pero por simplicidad:
+            setTimeout(() => {
+                window.location.href = DOWNLOAD_URL;
+                closeModal();
+            }, 1000);
+
+            // El formulario se enviará normalmente.
+            return true;
+        }
+
+        // Conectar botones de descarga
+        document.querySelectorAll('.btn-download, .btn-primary').forEach(btn => {
+            // Solo interceptar si es enlace de descarga
+            if (btn.getAttribute('href').includes('setup.exe') || btn.getAttribute('href').includes('Setup.exe')) {
+                btn.onclick = openDownloadModal;
+            }
+        });
+
+        // Cerrar al clic fuera
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 
 </html>
