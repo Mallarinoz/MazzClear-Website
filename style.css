@@ -211,6 +211,159 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Pricing Section */
+.pricing {
+    padding: 100px 0;
+    background: radial-gradient(circle at center, #1a2a3a 0%, var(--bg-dark) 100%);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.price-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-light);
+}
+
+.price-card.premier {
+    border-color: var(--accent);
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.price-card.premier:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+}
+
+.badge-offer {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #FF4757;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+}
+
+.badge-premier {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: black;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    width: max-content;
+}
+
+.price-title {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.price-card.premier .price-amount {
+    color: var(--accent);
+}
+
+.price-period {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.features-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.features-list li {
+    margin-bottom: 12px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features-list li.disabled {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: line-through;
+}
+
+.check-icon {
+    color: #2ECC71;
+    font-weight: bold;
+}
+
+.check-icon.gold {
+    color: var(--accent);
+}
+
+.btn-plan {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.btn-plan.free {
+    border: 1px solid var(--text-muted);
+    color: var(--text-main);
+}
+
+.btn-plan.pro {
+    background: var(--primary-light);
+    color: white;
+}
+
+.btn-plan.premier {
+    background: var(--accent);
+    color: black;
+}
+
+.btn-plan:hover {
+    transform: scale(1.02);
+}
+
 /* About */
 .about {
     padding: 100px 0;
@@ -357,7 +510,7 @@ blockquote {
     position: relative;
     transform: translateY(20px);
     transition: transform 0.3s ease;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
 .modal-overlay.active {
@@ -398,8 +551,8 @@ blockquote {
 .form-input {
     width: 100%;
     padding: 12px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 6px;
     color: #fff;
     outline: none;
