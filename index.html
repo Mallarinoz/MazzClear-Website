@@ -20,6 +20,7 @@
             </div>
             <nav class="nav">
                 <a href="#features">Características</a>
+                <a href="#pricing" style="color: var(--accent);">Precios</a>
                 <a href="./blog/index.html">Blog</a>
                 <a href="#about">Acerca de</a>
                 <a href="#contact">Contacto</a>
@@ -37,8 +38,8 @@
                     en una interfaz premium.</p>
                 <div class="cta-group">
                     <a href="https://github.com/Mallarinoz/MazzClear/releases/latest/download/MazzClear_V8_Setup.exe"
-                        class="btn-primary">Descargar Ahora</a>
-                    <a href="#" class="btn-secondary">Ver Licencia PRO</a>
+                        class="btn-download btn-primary">Descargar Ahora</a>
+                    <a href="#pricing" class="btn-secondary">Ver Oferta Lanzamiento</a>
                 </div>
                 <div class="tech-badges">
                     <span>Windows 10/11</span> • <span>Python Powered</span> • <span>Secure</span>
@@ -82,6 +83,75 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Planes y Precios</h2>
+            <p style="text-align: center; color: var(--text-muted);">Elige la potencia que tu PC necesita. Ofertas por
+                tiempo limitado.</p>
+
+            <div class="pricing-grid">
+                <!-- FREE -->
+                <div class="price-card">
+                    <div class="price-title">FREE</div>
+                    <div class="price-amount">$0</div>
+                    <span class="price-period">Para siempre</span>
+
+                    <ul class="features-list">
+                        <li><span class="check-icon">✓</span> Limpieza Básica</li>
+                        <li><span class="check-icon">✓</span> Escaneo Rápido</li>
+                        <li class="disabled">Borrado Seguro de Disco</li>
+                        <li class="disabled">Optimizador de Inicio</li>
+                        <li class="disabled">Soporte Prioritario</li>
+                    </ul>
+
+                    <a href="https://github.com/Mallarinoz/MazzClear/releases/latest/download/MazzClear_V8_Setup.exe"
+                        class="btn-plan free btn-download">Descargar Gratis</a>
+                </div>
+
+                <!-- PRO (Oferta) -->
+                <div class="price-card" style="border-color: var(--primary-light); transform: scale(1.05); z-index: 2;">
+                    <div class="badge-offer">🔥 50% DCTO - LANZAMIENTO</div>
+                    <div class="price-title" style="color: var(--primary-light);">PRO ANUAL</div>
+                    <div class="price-amount">
+                        <span class="old-price">$28</span>$14
+                    </div>
+                    <span class="price-period">USD / Año</span>
+
+                    <ul class="features-list">
+                        <li><span class="check-icon">✓</span> Limpieza Profunda</li>
+                        <li><span class="check-icon">✓</span> Borrado Militar (Wipe)</li>
+                        <li><span class="check-icon">✓</span> Tema Dark/Neon</li>
+                        <li><span class="check-icon">✓</span> Optimizador de Registro</li>
+                        <li><span class="check-icon">✓</span> Actualizaciones 1 Año</li>
+                    </ul>
+
+                    <a href="https://www.paypal.com/invoice/p/#YK9GHATRKE2W5MB5" class="btn-plan pro">COMPRAR AHORA</a>
+                    <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.7;">Oferta válida Q1 2026</p>
+                </div>
+
+                <!-- PREMIER -->
+                <div class="price-card premier">
+                    <div class="badge-premier">💎 MEJOR VALOR</div>
+                    <div class="price-title" style="color: var(--accent);">PREMIER</div>
+                    <div class="price-amount">$98</div>
+                    <span class="price-period">USD / PAGO ÚNICO</span>
+
+                    <ul class="features-list">
+                        <li><span class="check-icon gold">✓</span> <strong>Todo lo de PRO</strong></li>
+                        <li><span class="check-icon gold">✓</span> <strong>Licencia Vitalicia</strong></li>
+                        <li><span class="check-icon gold">✓</span> Soporte VIP 24/7</li>
+                        <li><span class="check-icon gold">✓</span> Acceso a Betas Futuras</li>
+                        <li><span class="check-icon gold">✓</span> Sin pagos recurrentes</li>
+                    </ul>
+
+                    <a href="https://www.paypal.com/invoice/p/#YK9GHATRKE2W5MB5" class="btn-plan premier">OBTENER
+                        PREMIER</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
@@ -98,13 +168,18 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-cols">
                 <div class="col">
                     <h4>Mazz Clear</h4>
                     <p>Bogotá, Colombia</p>
                     <p>CEO: Ing. Ricardo C. Ortiz Mallarino</p>
+                    <div style="margin-top: 15px;">
+                        <!-- Contador de Descargas Reales desde GitHub Releases -->
+                        <img src="https://img.shields.io/github/downloads/Mallarinoz/MazzClear/total?style=for-the-badge&label=DESCARGAS&color=285AEB&logo=github"
+                            alt="Total Descargas MazzClear" />
+                    </div>
                 </div>
                 <div class="col">
                     <h4>Enlaces</h4>
@@ -149,6 +224,83 @@
             </div>
         </div>
     </footer>
+    <!-- Download Modal -->
+    <div class="modal-overlay" id="downloadModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div style="font-size: 3rem; margin-bottom: 20px;">🎉</div>
+            <h3 style="margin-bottom: 10px;">¡Tu descarga está lista!</h3>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">
+                Ingresa tu correo para enviarte el enlace de descarga directa y consejos para optimizar tu PC.
+            </p>
+
+            <!-- Formulario con Endpoint Real de Formspree -->
+            <form id="downloadForm" action="https://formspree.io/f/xlgddwgl" method="POST"
+                onsubmit="handleDownload(event)">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="name" class="form-input" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                </div>
+                <!-- Campo oculto para indicar origen -->
+                <input type="hidden" name="source" value="Website Download Modal">
+
+                <button type="submit" class="btn-submit">DESCARGAR AHORA</button>
+            </form>
+
+            <p class="privacy-note">🔒 No compartiremos tu información. 100% Spam Free.</p>
+        </div>
+    </div>
+
+    <script>
+        // Configuración
+        const DOWNLOAD_URL = "https://github.com/Mallarinoz/MazzClear/releases/latest/download/MazzClear_V8_Setup.exe";
+        const modal = document.getElementById('downloadModal');
+
+        // Abrir Modal
+        function openDownloadModal(e) {
+            e.preventDefault(); // Evitar descarga directa
+            modal.classList.add('active');
+        }
+
+        // Cerrar Modal
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        // Manejar Envío
+        function handleDownload(e) {
+            // Permitir que Formspree procese (se abre en nueva pestaña usualmente si no usamos AJAX)
+            // Para UX fluida, iniciamos descarga y dejamos que el form se envíe.
+
+            // Opcional: Usar AJAX para que no recargue, pero por simplicidad:
+            setTimeout(() => {
+                window.location.href = DOWNLOAD_URL;
+                closeModal();
+            }, 1000);
+
+            // El formulario se enviará normalmente.
+            return true;
+        }
+
+        // Conectar botones de descarga
+        document.querySelectorAll('.btn-download, .btn-primary').forEach(btn => {
+            // Solo interceptar si es enlace de descarga
+            if (btn.getAttribute('href').includes('setup.exe') || btn.getAttribute('href').includes('Setup.exe')) {
+                btn.onclick = openDownloadModal;
+            }
+        });
+
+        // Cerrar al clic fuera
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 
 </html>
