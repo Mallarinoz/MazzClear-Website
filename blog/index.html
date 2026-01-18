@@ -115,7 +115,8 @@
     <!-- Header Global (Reutilizado) -->
     <header class="header">
         <div class="container">
-            <div class="logo"><a href="../index.html" style="text-decoration:none; color:white;">MAZZ CLEAR <span
+            <div class="logo"><img src="logo_header.png" alt="Mazz Clear V8"
+                    style="height: 90px; vertical-align: middle; margin-right: 10px;"><a href="../index.html" style="text-decoration:none; color:white;">MAZZ CLEAR <span
                         class="version">V8</span></a></div>
             <nav class="nav">
                 <a href="../index.html">Inicio</a>
@@ -208,31 +209,54 @@
                     <p>+57 310 583 39 78</p>
                 </div>
                 <div class="col">
-                    <h4>Síguenos</h4>
-                    <!-- X (Twitter) -->
-                    <a href="https://x.com/MAZZCLEAR_V8" target="_blank" class="social-link">
-                        <div style="width:20px; display:flex; justify-content:center; align-items:center;">
-                            <svg viewBox="0 0 24 24" style="fill:white; width:14px; height:14px;">
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                            </svg>
-                        </div>
-                        X (Twitter)
-                    </a>
-
+                    
+				<h4>Síguenos</h4>
                     <!-- Instagram -->
-                    <a href="https://www.instagram.com/mazzclear/" target="_blank" class="social-link">
-                        <div
-                            style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); display:flex; border-radius: 6px; width: 20px; height: 20px; align-items:center; justify-content:center;">
-                            <svg viewBox="0 0 24 24" style="fill:white; width:16px; height:16px;">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                </path>
-                            </svg>
-                        </div>
-                        Instagram
-                    </a>
+					<style>
+						/* Clase para el efecto Hover sin romper la alineación */
+						.social-link-custom {
+							/* Forzamos la alineación horizontal */
+							display: inline-flex !important; 
+							align-items: center !important; 
+							text-decoration: none !important; 
+							transition: all 0.2s ease-in-out;
+							width: fit-content;
+						}
+
+						/* Efecto al pasar el ratón */
+						.social-link-custom:hover {
+							opacity: 0.8;
+							transform: translateX(5px); /* Se mueve un poco a la derecha */
+						}
+					</style>
+
+					<div style="display: flex; flex-direction: column; gap: 5px; align-items: flex-start;">
+						
+						<a href="https://www.instagram.com/mazzclear/" target="_blank" class="social-link-custom">
+							<div style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); display: flex; border-radius: 6px; width: 24px; height: 24px; align-items: center; justify-content: center; flex-shrink: 0;">
+								<svg viewBox="0 0 24 24" style="fill:white; width:18px; height:18px; display: block;">
+									<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+								</svg>
+							</div>
+							<span style="margin-left: 10px; font-family: sans-serif; font-weight: bold; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 24px; display: block;">
+								Instagram
+							</span>
+						</a>
+
+						<a href="https://x.com/MAZZCLEAR_V8" target="_blank" class="social-link-custom">
+							<div style="background-color: #ffffff; display: flex; border-radius: 6px; width: 24px; height: 24px; align-items: center; justify-content: center; flex-shrink: 0;">
+								<svg viewBox="0 0 16 16" style="fill:#000000; width:14px; height:14px; display: block;">
+									<path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
+								</svg>
+							</div>
+							<span style="margin-left: 10px; font-family: sans-serif; font-weight: bold; color: #ffffff; line-height: 24px; display: block;">
+								en Twitter
+							</span>
+						</a>
+					</div>
+
                 </div>
+            </div>
             </div>
             <div class="copyright">
                 &copy; 2025 Mazz Development Corp SAS. Todos los derechos reservados.
